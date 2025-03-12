@@ -1,0 +1,257 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Food Delivery Modern Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* Food-themed vibrant colors */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    /* Vibrant orange primary for food delivery */
+    --primary: 24 100% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 24 100% 50%;
+
+    /* Warm secondary colors */
+    --secondary: 25 100% 97%;
+    --secondary-foreground: 220 13% 18%;
+
+    --muted: 25 25% 95%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 25 100% 97%;
+    --accent-foreground: 220 13% 18%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 25% 90%;
+    --input: 25 25% 90%;
+    --ring: 24 100% 58%;
+
+    --radius: 12px;
+
+    /* Custom food delivery colors */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 221 83% 53%;
+    
+    /* Food category colors */
+    --pizza: 0 100% 64%;
+    --burger: 35 100% 55%;
+    --chinese: 51 100% 50%;
+    --dessert: 320 100% 70%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(24 100% 58%), hsl(35 100% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(25 100% 97%), hsl(25 25% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(24 100% 58%) 0%, hsl(35 100% 55%) 50%, hsl(51 100% 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(25 25% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px hsl(24 100% 58% / 0.1);
+    --shadow-md: 0 4px 12px hsl(24 100% 58% / 0.15);
+    --shadow-lg: 0 8px 24px hsl(24 100% 58% / 0.2);
+    --shadow-food: 0 8px 32px hsl(24 100% 58% / 0.25);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Keep orange primary in dark mode */
+    --primary: 24 100% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 24 100% 50%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 24 100% 58%;
+
+    /* Keep food delivery colors in dark mode */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 221 83% 53%;
+    
+    /* Food category colors */
+    --pizza: 0 100% 64%;
+    --burger: 35 100% 55%;
+    --chinese: 51 100% 50%;
+    --dessert: 320 100% 70%;
+    
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(24 100% 58%), hsl(35 100% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217.2 32.6% 17.5%), hsl(217.2 32.6% 20%));
+    --gradient-hero: linear-gradient(135deg, hsl(24 100% 58%) 0%, hsl(35 100% 55%) 50%, hsl(51 100% 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(222.2 84% 4.9%) 0%, hsl(217.2 32.6% 17.5%) 100%);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  /* Button variants */
+  .btn-hero {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transform hover:scale-105;
+    background: var(--gradient-primary);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-food-category {
+    @apply bg-card hover:bg-accent border border-border rounded-xl p-4 hover:shadow-md hover:scale-105;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Card variants */
+  .food-card {
+    @apply bg-card rounded-2xl border border-border shadow-sm hover:shadow-lg hover:-translate-y-1;
+    background: var(--gradient-card);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hero-card {
+    @apply rounded-3xl shadow-2xl;
+    background: var(--gradient-hero);
+  }
+  
+  /* Animation classes */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.8s ease-out forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+  
+  .animate-pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+  }
+  
+  /* Hover effects */
+  .hover-glow {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-food);
+    transform: translateY(-4px);
+  }
+  
+  /* Scroll animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
